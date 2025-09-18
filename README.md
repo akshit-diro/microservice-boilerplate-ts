@@ -8,13 +8,9 @@ A provider-agnostic microservice starter with logging, metrics, health probes, r
 docker run -it --rm \
     --name microservice \
     -v ./:/app \
+    -w /app \
     -p 3000:3000 \
     node:23 /bin/bash
-
-# CLEANUP ENVIRONMENT
-npm cache clean --force
-rm -rf node_modules package-lock.json
-npm install -g npm@latest
 
 # INSTALL npm PACKAGES
 npm i
