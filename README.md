@@ -4,8 +4,25 @@ A provider-agnostic microservice starter with logging, metrics, health probes, r
 
 ## Quick Start
 ```bash
+# INITIALIZE DOCKER CONTAINER
+docker run -it --rm \
+    --name microservice \
+    -v ./:/app \
+    -p 3000:3000 \
+    node:23 /bin/bash
+
+# CLEANUP ENVIRONMENT
+npm cache clean --force
+rm -rf node_modules package-lock.json
+npm install -g npm@latest
+
+# INSTALL npm PACKAGES
 npm i
+
+# RUN DEV SERVER
 npm run dev
+
+# TEST API
 # curl http://localhost:3000/healthz
 ```
 
