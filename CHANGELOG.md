@@ -1,0 +1,9 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on Conventional Commits (https://www.conventionalcommits.org/).
+
+## [Unreleased]
+- Initial scaffolding of changelog.
+

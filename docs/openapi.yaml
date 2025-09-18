@@ -1,0 +1,21 @@
+openapi: 3.0.3
+info:
+  title: Boilerplate Microservice API
+  version: 0.1.0
+paths:
+  /api/v1/ping:
+    get:
+      summary: Simple health/ping
+      parameters:
+        - in: query
+          name: name
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }

@@ -1,0 +1,6 @@
+apiVersion: v2
+name: boilerplate-microservice
+description: A provider-agnostic microservice boilerplate
+type: application
+version: 0.1.0
+appVersion: "0.1.0"

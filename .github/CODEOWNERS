@@ -1,0 +1,7 @@
+# Default owners (replace with your GitHub handles or team)
+*       @your-org/your-team
+
+# Example: API and domain codeowners
+src/api/*  @your-org/api-team
+src/domain/*  @your-org/platform-team
+

@@ -1,0 +1,11 @@
+image:
+  repository: your-registry/boilerplate-microservice
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 80
+env:
+  - name: PORT
+    value: "3000"
+resources: {}

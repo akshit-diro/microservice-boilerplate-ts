@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: boilerplate-microservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: boilerplate-microservice }
+  template:
+    metadata:
+      labels: { app: boilerplate-microservice }
+    spec:
+      containers:
+        - name: app
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 3000
+          env:
+{{- range .Values.env }}
+            - name: {{ .name }}
+              value: "{{ .value }}"
+{{- end }}
+          readinessProbe:
+            httpGet: { path: /readyz, port: 3000 }
+          livenessProbe:
+            httpGet: { path: /livez, port: 3000 }

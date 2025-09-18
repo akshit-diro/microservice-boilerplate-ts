@@ -1,0 +1,3 @@
+serviceName: boilerplate-microservice
+logLevel: info
+metricsEnabled: true
